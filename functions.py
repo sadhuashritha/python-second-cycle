@@ -11,5 +11,15 @@ n = list(map(int,input("Enter Elements: ").split( )))
 check(n)
 
 
+#return True if the str contains Vowels
+def vowel(n):
+    count = 0
+    for i in n:
+        if i in "aeiouAEIOU":
+            print(i)
+            count += 1
+    print(count)
+n = str(input("Enter a Word: "))
+vowel(n)
 
 
