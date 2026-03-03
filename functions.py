@@ -31,4 +31,12 @@ def numbers(n):
 n = list(map(int,input("Enter Numbers: ").split( )))
 print(numbers(n))
 
-
+#Check whether the given string is palindrome
+def palindrome(n):
+    n1 = n[::-1]
+    if n == n1:
+        return True
+    else:
+        return False
+n = str(input("Enter a String: "))
+print(palindrome(n))
