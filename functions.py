@@ -22,4 +22,13 @@ def vowel(n):
 n = str(input("Enter a Word: "))
 vowel(n)
 
+#Sum of first n numbers
+def numbers(n):
+    sum = 0
+    for i in n:
+        sum += i
+    return sum
+n = list(map(int,input("Enter Numbers: ").split( )))
+print(numbers(n))
+
 
