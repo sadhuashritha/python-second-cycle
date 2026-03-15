@@ -1,4 +1,3 @@
-'''
 #1. Sum of numbers using *args
 def summation(*args):
     sum = 0
@@ -8,10 +7,7 @@ def summation(*args):
 #print(summation(1,2,3,4,5))
 s = list(map(int,input().split()))
 print(summation(*s))
-'''
 
-
-'''
 # 2. Find maximum using *args
 def func(*args):
     s = max(args)
@@ -19,10 +15,7 @@ def func(*args):
 
 s = list(map(int,input().split()))
 func(*s)
-'''
-
-
-'''  
+ 
 #3. Count arguments
 def count(*args):
     count = 0
@@ -31,9 +24,7 @@ def count(*args):
     return count
 s = list(map(int,input().split()))
 print(count(*s))
-'''
 
-'''
 #4. Print all arguments
 def count(*args):
     count = 0
@@ -41,9 +32,8 @@ def count(*args):
         print(i)
 s = list(map(int,input().split()))
 count(*s)
-'''
 
-'''
+
 #5. Multiply numbers
 def count(*args):
     mul = 1
@@ -52,4 +42,4 @@ def count(*args):
     print(mul)
 s = list(map(int,input().split()))
 count(*s)
-'''
+
