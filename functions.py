@@ -12,7 +12,7 @@ check(n)
 
 
 #return True if the str contains Vowels
-def vowel(n):
+def vowel(l):
     count = 0
     for i in n:
         if i in "aeiouAEIOU":
