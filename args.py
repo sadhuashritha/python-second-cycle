@@ -34,4 +34,12 @@ s = list(map(int,input().split()))
 count(*s)
 
 
+#5. Multiply numbers
+def count(*args):
+    mul = 1
+    for i in args:
+        mul *= i
+    print(mul)
+s = list(map(int,input().split()))
+count(*s)
 
