@@ -93,8 +93,22 @@ def palin(n):
         return False
 print(palin("wow"))
 print()
+
 # Write a function to find GCD of two numbers.
 
 # Write a function to return list of prime numbers up to n.
 
 # Write a function that takes a list and returns only unique elements.
+def unique(*n):
+    arr = []
+    dic = {}
+    for i in n:
+        if i in dic:
+            dic[i] += 1
+        else:
+            dic[i] = 1
+    for i,j in dic.items():
+        if j == 1:
+            arr.append(i)
+    return arr
+print(unique(2,3,4,5,2,3,4,5,6,7,8))
