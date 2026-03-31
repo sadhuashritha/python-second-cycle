@@ -12,18 +12,4 @@ ed.empmethod()
 ed.devmethod()
 
 '''
-'''
-1. Single Inheritance (Basic)
 
-Create a class Animal with a method eat().
-Create a class Dog that inherits from Animal and calls eat().
-
-class Animal:
-    def eat(self):
-        print("Animal (parent)class")
-class Dog(Animal):
-    print("Animal")
-d = Dog()
-d.eat()
-
-'''
