@@ -52,3 +52,9 @@ class Solution:
             if sumi % 2 == 0:
                 count+=1
         return count
+
+# Valid Perfect Square
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        r = int(num ** 0.5)
+        return r * r == num
