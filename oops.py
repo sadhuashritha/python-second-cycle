@@ -71,3 +71,51 @@ r.area()
 r.perimeter()
 
 
+'''
+Payment System
+Design an abstract class Payment:
+* method: pay(amount)
+Implement:
+* CreditCardPayment
+* UPIPayment
+* NetBankingPayment
+'''
+'''
+from abc import ABC, abstractmethod
+class Payment(ABC):
+    @abstractmethod
+    def pay(self,amount):
+        pass
+class CreditCardPayment(Payment):
+    def pay(self,amount):
+        print("Credit card payment",amount)
+class UPIPayment(Payment)
+    def pay(self,amount):
+        print("UPI payment",amount)
+class NetBankingPayment(Payment)
+    def pay(self,amount):
+        print("NetBanking payment",amount)
+
+a = CreditCardPayment()
+b = UPIPayment()
+c = NetBankingPayment()
+
+a.pay(2000)
+b.pay(700)
+c.pay(1000)
+        
+    '''
+'''
+#take a class shape as parent class define draw method in it, child class as circle #as usual draw method should be in child class also then implement it as method overfding
+'''
+
+class shape:
+    def draw(self):
+        print("This is shape class")
+class circle(shape):
+    def draw(self):
+        print("This is circle class")
+        
+        
+c = circle()
+c.draw()
