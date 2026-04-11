@@ -41,20 +41,3 @@ d = Developer("Ashritha","Sadhu")
 print(d.name)
 print(d.fullname)
 
-# Count Integers With Even Digit Sum
-class Solution:
-    def countEven(self, num: int) -> int:
-        count = 0
-        for i in range(1,num+1):
-            sumi = 0
-            for j in str(i):
-                sumi += int(j)
-            if sumi % 2 == 0:
-                count+=1
-        return count
-
-# Valid Perfect Square .
-class Solution:
-    def isPerfectSquare(self, num: int) -> bool:
-        r = int(num ** 0.5)
-        return r * r == num
