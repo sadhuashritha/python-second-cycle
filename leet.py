@@ -120,5 +120,14 @@ class Solution:
                     break
         return prices
 
+# 2670. Find the Distinct Difference Array
+class Solution:
+    def distinctDifferenceArray(self, nums: List[int]) -> List[int]:
+        arr = []
+        for i in range(len(nums)):
+            prefix = set(nums[:i+1])
+            suffix = set(nums[i+1:])
+            arr.append(len(prefix) - len(suffix))
+        return arr
 
 # 
