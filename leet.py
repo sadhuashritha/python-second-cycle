@@ -90,3 +90,12 @@ class Solution:
         for i in arr:
             unique.add(int(i))
         return len(unique)
+    
+# 2108. Find First Palindromic String in the Array
+class Solution:
+    def firstPalindrome(self, words: List[str]) -> str:
+        for i in words:
+            if i == i[::-1]:
+                return i
+        else:
+            return ""
