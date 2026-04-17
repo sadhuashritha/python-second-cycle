@@ -109,3 +109,14 @@ class Solution:
             if n % (i + 1) == 0:
                 sum += (nums[i] * nums[i])
         return sum
+
+# 1475. Final Prices With a Special Discount in a Shop
+class Solution:
+    def finalPrices(self, prices: List[int]) -> List[int]:
+        for i in range(len(prices)):
+            for j in range(i+1,len(prices)):
+                if prices[j] <= prices[i]:
+                    prices[i] -= prices[j]
+                    break
+        return prices
+
