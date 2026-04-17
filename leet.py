@@ -75,3 +75,18 @@ class Solution:
             mini = min(mini,prefix)
         return max(1,1-(mini))
  
+
+#  1805. Number of Different Integers in a String
+class Solution:
+    def numDifferentIntegers(self, word: str) -> int:
+        s = ""
+        for i in word:
+            if i.isdigit():
+                s += i
+            else:
+                s += " "
+        arr = s.split()
+        unique = set()
+        for i in arr:
+            unique.add(int(i))
+        return len(unique)
