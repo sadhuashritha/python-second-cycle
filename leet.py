@@ -134,4 +134,21 @@ class Solution:
 class Solution:
     def checkString(self, s: str) -> bool:
         return "ba" not in s
-        
+
+
+# 2644. Find the Maximum Divisibility Score
+class Solution:
+    def maxDivScore(self, nums: List[int], divisors: List[int]) -> int:
+        mini = 0 
+        answer = min(divisors)
+        for i in divisors:
+            count = 0
+            for j in nums:
+                if j % i  == 0:
+                    count += 1
+            if count > mini:
+                mini = count
+                answer = i
+            elif count == mini:
+                answer = min(i,answer)
+        return answer
