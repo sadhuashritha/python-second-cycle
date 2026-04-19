@@ -164,3 +164,14 @@ class Solution:
             if b == a:
                 return True
         return False
+    
+# Harshad Number
+class Solution:
+    def sumOfTheDigitsOfHarshadNumber(self, x: int) -> int:
+        z = str(x)
+        sum = 0
+        for i in z:
+            sum += int(i)
+        if x % sum == 0:
+            return sum
+        return -1
