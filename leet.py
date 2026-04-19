@@ -152,3 +152,15 @@ class Solution:
             elif count == mini:
                 answer = min(i,answer)
         return answer
+
+# Check if Array Is Sorted and Rotated
+class Solution:
+    def check(self, nums: List[int]) -> bool:
+        a = sorted(nums)
+        if a == nums:
+            return True
+        for i in range(len(nums)):
+            b = nums[i:]+nums[:i]
+            if b == a:
+                return True
+        return False
