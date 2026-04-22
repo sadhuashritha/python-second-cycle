@@ -121,3 +121,16 @@ class circle(shape):
         
 c = circle()
 c.draw()
+
+class Calculator:
+    def __init__(self,a,b,c=0):
+        self.a = a
+        self.b = b
+        self.c = c
+    def add(self):
+        sum_1 = self.a+self.b+self.c
+        print(sum_1)
+c = Calculator(20,10,40)
+c.add()
+c1 = Calculator(20,60)
+c1.add()
