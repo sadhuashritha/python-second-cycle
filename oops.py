@@ -107,3 +107,18 @@ c.pay(1000)
     '''
 
 
+'''
+#take a class shape as parent class define draw method in it, child class as circle #as usual draw method should be in child class also then implement it as method overfding
+'''
+
+class shape:
+    def draw(self):
+        print("This is shape class")
+class circle(shape):
+    def draw(self):
+        print("This is circle class")
+        
+        
+c = circle()
+c.draw()
+
