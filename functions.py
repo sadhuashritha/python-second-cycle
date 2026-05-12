@@ -148,9 +148,3 @@ def largest(a,b,c):
 
 largest(3,1234,9)
 
-# Create a function that takes three arguments and prints their average.
-def avg(a,b,c):
-    print((a+b+c)/3)
-avg(1,1,1)
-
-# Write a function to count vowels in a string.
