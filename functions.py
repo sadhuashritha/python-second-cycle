@@ -1,3 +1,4 @@
+'''
 #return True if the str contains Vowels
 def vowel(n):
     count = 0
@@ -113,3 +114,43 @@ def unique(*n):
     return arr
 print(unique(2,3,4,5,2,3,4,5,6,7,8))
 
+'''
+# Write a function to add two numbers and return the result.
+def addi():
+    return 3+4+7
+print(addi())
+
+# Create a function to check whether a number is even or odd.
+def check(n):
+    if n % 2 == 0:
+        print("Even Number")
+    else:
+        print("Odd Number")
+check(9)
+
+# Write a function to find the factorial of a number.
+def fact(n):
+    # 5! = 5 *4*3*2*1
+    if n == 0 | n== 1:
+        return 1
+    else:
+        return n * fact(n-1)
+print(fact(6))
+
+# Create a function that returns the largest among three numbers.
+def largest(a,b,c):
+    if a > b and a > c:
+        print("A is Greater")
+    elif b > a and b > c:
+        print("B is Greater")
+    else:
+        print("C is Greater")
+
+largest(3,1234,9)
+
+# Create a function that takes three arguments and prints their average.
+def avg(a,b,c):
+    print((a+b+c)/3)
+avg(1,1,1)
+
+# Write a function to count vowels in a string.
