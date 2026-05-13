@@ -41,3 +41,13 @@ avg(1,2,3)
 avg(0,6,7,8)
 print()
 
+# Create a function using *args to multiply all numbers.
+def mul(*n):
+    ans = 1
+    for i in n:
+        ans *= i
+    print(ans)
+mul(1,2,3,4)
+mul(1,2)
+mul(0,3,2,21)
+print()
