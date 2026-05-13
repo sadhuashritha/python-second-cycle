@@ -1,3 +1,4 @@
+'''
 # Write a function using positional arguments to add two numbers.
 def add(n,m):
     return n + m
@@ -38,3 +39,28 @@ print()
 # Write a function where missing argument raises error.
 # Write a function that swaps two numbers using arguments.
 # Write a function that takes list as argument and modifies it.
+'''
+# Write a function using positional arguments to multiply two numbers.
+def mul(a,b,/):
+    return a * b
+print(mul(2,4))
+
+# Create a function using keyword arguments to display student details
+def details(*,name,age,cls,section):
+    print("name:",name, "age:",age,"cls:",cls,"section:",section)
+details(name = "ashritha",age = 80,cls = "B-Tech",section = "Beta") 
+
+# Write a function with a default argument for country name.
+def country(name = "India"):
+    print(name)
+country("Sweden")
+country("UK")
+country()
+country("Australia")
+country("Japan")
+country()
+
+# Create a function that takes three arguments and prints their average.
+def avg(a,b,c):
+    return (a+b+c) / 3
+print(avg(1,2,3))

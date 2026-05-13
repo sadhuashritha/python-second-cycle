@@ -187,3 +187,11 @@ def mini(n):
     return min(n)
 n = [1,2,3,4,5,6,7,8,9,0]
 print(mini(n))
+
+# Create a function that converts Celsius temperature into Fahrenheit
+def convert(c):
+    f = ( c * 1.8 ) + 32
+    print(f)
+convert(108)
+
+
