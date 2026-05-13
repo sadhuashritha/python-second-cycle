@@ -181,3 +181,9 @@ print(ele(n))
 def pali(n):
     return n == n[::-1]
 print(pali("madam"))
+
+# Write a function to find the minimum element in a list.
+def mini(n):
+    return min(n)
+n = [1,2,3,4,5,6,7,8,9,0]
+print(mini(n))
