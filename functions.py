@@ -148,3 +148,36 @@ def largest(a,b,c):
 
 largest(3,1234,9)
 
+# Create a function that takes three arguments and prints their average.
+def avg(a,b,c):
+    print((a+b+c)/3)
+avg(1,1,1)
+
+# Write a function to count vowels in a string.
+def vowel(n):
+    count = 0
+    for i in n:
+        if i in "aeiouAEIOU":
+            count += 1
+    print(count)
+vowel("ashritha")
+
+
+# Create a function to reverse a string.
+def rev(n):
+    return n == n[::-1]
+print(rev("wow"))
+
+# Write a function to calculate the sum of elements in a list.
+def ele(n):
+    sum = 0
+    for i in n:
+        sum += i
+    return sum
+n = [1,2,3,4,5,6,7,8,9,0]
+print(ele(n))
+
+# Create a function to check whether a string is a palindrome.
+def pali(n):
+    return n == n[::-1]
+print(pali("madam"))
