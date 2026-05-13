@@ -44,11 +44,15 @@ print()
 def mul(a,b,/):
     return a * b
 print(mul(2,4))
+print()
+
 
 # Create a function using keyword arguments to display student details
 def details(*,name,age,cls,section):
     print("name:",name, "age:",age,"cls:",cls,"section:",section)
 details(name = "ashritha",age = 80,cls = "B-Tech",section = "Beta") 
+print()
+
 
 # Write a function with a default argument for country name.
 def country(name = "India"):
@@ -59,8 +63,56 @@ country()
 country("Australia")
 country("Japan")
 country()
+print()
+
 
 # Create a function that takes three arguments and prints their average.
 def avg(a,b,c):
     return (a+b+c) / 3
 print(avg(1,2,3))
+print()
+
+
+# Write a function with default values for username and password.
+def val(username = "user", password = 1234):
+    print("username:",username,"password:",password)
+val("ashritha",7869)
+val()
+print()
+
+
+# Create a function that accepts marks of five subjects as arguments.
+def sub(a,b,c,d,e):
+    print("A:",a,"B:",b,"C:",c,"D:",d,"E:",e)
+sub(11,12,13,14,15)
+
+# Write a function to calculate simple interest using arguments.
+def interest(p,r,t):
+    s = (p*r*t)/100
+    print("simple interest:", s)
+interest(10,10,10)
+print()
+
+# Create a function using mixed positional and keyword arguments.
+def details(name,age,/,*,cls,section):
+    print("name:",name, "age:",age,"cls:",cls,"section:",section)
+details("ashritha",80, cls = "B-Tech", section = "Beta") 
+print()
+
+# Write a function that accepts name and age, then prints eligibility for voting.
+def vote(name,age):
+    if age >= 18:
+        print(name, "is eligible for voting as",name,"is",age,"years old")
+    else:
+        print(name,"is not eligible for voting as",name,"is",age,"years old")
+vote("ashritha", 18)
+vote("naina",6)
+print()
+
+# Create a function using default arguments to calculate area of rectangle.
+def calculate(l=1,b=1):
+    ans = 2 * (l + b)
+    print(ans)
+calculate(2,2)
+calculate()
+print()
