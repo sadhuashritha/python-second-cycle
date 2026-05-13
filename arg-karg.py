@@ -51,3 +51,34 @@ mul(1,2,3,4)
 mul(1,2)
 mul(0,3,2,21)
 print()
+
+# Write a function using **kwargs to print key-value pairs.
+def student(**n):
+    print(n)
+student(name = "ashritha",age = 20,section = "Beta")
+print()
+
+# Create a function using both *args and **kwargs.
+def details(n,*args,**kwargs):
+    print("Details of the student:",n)
+    print("arguments:",args)
+    print("keyword arguments:",kwargs)
+details("details", "ashritha","Beta",age = 21,score = 80)
+print()
+
+# Write a function that counts total arguments passed using *args.
+def num(*args):
+    count = 0
+    for i in args:
+        count +=1
+    print(count)
+num(2,1,3,5,6,7)
+num(1,2,3,4,6)
+num(1,2,3)
+print()
+
+# Create a function to display product details using **kwargs.
+def display(**kwargs):
+    print(kwargs)
+display(name = "ashritha",age = 21, section = "Beta")
+print()
