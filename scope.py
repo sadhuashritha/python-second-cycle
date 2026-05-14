@@ -28,5 +28,41 @@ def nested():
     print(n)
     def nested1():
         print(n)
-    nested1()
+    nested1()  
 nested()
+print()
+
+# Write a program to show variable shadowing.
+x = 90
+def var():
+    x = 80
+    print("Variable Shadowing: ",x)
+var()
+print("Global Variable: ",x)
+print()
+
+# Create a program to access global variable inside a function.
+x = 10
+def glo():
+    print("Printing global variable inside a fun:",x)
+glo()
+print()
+
+# Write a function where local and global variables have same name.
+x = 90
+def fun():
+    x = 10
+    print("Local variable:",x)
+fun()
+print("Global variable: ",x)
+
+# Create a nested function using nonlocal keyword.
+n = 10
+def var1():
+    n = 20
+    def var2():
+        nonlocal n
+        n = 90
+    var2()
+    return n
+print(var1())
