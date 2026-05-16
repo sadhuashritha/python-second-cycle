@@ -94,6 +94,22 @@ class Employee:
 e = Employee("ashritha",20,"HR")
 e.details()
 e.upd_details("Manager")
+print()
+
 # Create a method calling another method.
+class Student:
+    def greet(self):
+        return "Hello"
+    def details(self,name):
+        print(self.greet() , name)
+s = Student()
+s.details("Ashritha")
+print()
 # Create a method to check even or odd.
+class Check:
+    def res(self,a):
+        return a%2 == 0
+c = Check()
+print(c.res(3))
+print()
 # Create a menu-driven calculator using methods.
