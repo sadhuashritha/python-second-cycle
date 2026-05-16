@@ -119,5 +119,3 @@ class Manager(Employee):
 m = Manager("Ashritha",21,2000000)
 m.display()
 print()
-
-# Create program showing inherited methods.
