@@ -66,3 +66,5 @@ def var1():
     var2()
     return n
 print(var1())
+
+# Write a program to explain LEGB rule.
