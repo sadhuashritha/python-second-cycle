@@ -49,10 +49,51 @@ class Square:
 x = Square(4)
 y = Square(2)
 print(x ** y)
+print()
 # Create a method to update employee salary.
+class Employee:
+    def __init__(self,name,salary):
+        self.name = name
+        self.salary = salary
+    def upd_salary(self,new_salary):
+        self.salary = new_salary
+        print(self.salary)
+e = Employee("ashritha",900000)
+e.upd_salary(1000000)
+print()
+
 # Create a class method using @classmethod.
+class Student:
+    x = 10
+    @classmethod
+    def details(cls):
+        print(cls.x)
+s = Student()
+s.details()
+print()
+
 # Create a static method using @staticmethod.
+class Static:
+    @staticmethod
+    def Add(a,b):
+        return a+b
+print(Static.Add(10,20))
+print()
+
 # Create multiple methods in one class.
+class Employee:
+    def __init__(self,name,age,dept):
+        self.name = name 
+        self.age = age
+        self.dept = dept
+    def details (self):
+        print(self.name,self.age,self.dept)
+    def upd_details(self,x):
+        self.dept = x
+        print(self.name,self.age,self.dept)
+e = Employee("ashritha",20,"HR")
+e.details()
+e.upd_details("Manager")
 # Create a method calling another method.
 # Create a method to check even or odd.
 # Create a menu-driven calculator using methods.
