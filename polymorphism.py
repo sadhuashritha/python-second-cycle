@@ -48,8 +48,11 @@ a = Area()
 print(a.rect(2,3))
 print(a.rect())
 
-# Create animal sound program using polymorphism.
+
+    
+
 # Create polymorphism using loops.
+
 # Create duck typing example.
 # Create runtime polymorphism example.
 # Create polymorphism for payment methods.
