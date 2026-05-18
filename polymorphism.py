@@ -48,7 +48,21 @@ a = Area()
 print(a.rect(2,3))
 print(a.rect())
 
+# Create animal sound program using polymorphism.
+class Animal:
+    def Sound(self):
+        print("Animal Makes Sound")
 
+class Dog(Animal):
+    def Sound(self):
+        print("Wolf Wolf")
+class Cat(Animal):
+    def Sound(self):
+        print("Meow Meow")
+d = Dog()
+d.Sound()
+c = Cat()
+c.Sound()
     
 
 # Create polymorphism using loops.
