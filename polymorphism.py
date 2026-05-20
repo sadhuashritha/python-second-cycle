@@ -64,9 +64,3 @@ d.Sound()
 c = Cat()
 c.Sound()
     
-
-# Create polymorphism using loops.
-
-# Create duck typing example.
-# Create runtime polymorphism example.
-# Create polymorphism for payment methods.
