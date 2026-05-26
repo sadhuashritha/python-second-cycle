@@ -1,3 +1,3 @@
-if n == 0 | n== 1:
-        return 1
-    else:
+n = open("fhandling1.py","r")
+print(n.read())
+n.close()
