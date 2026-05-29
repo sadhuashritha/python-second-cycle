@@ -71,7 +71,6 @@ r.area()
 r.perimeter()
 
 
-'''
 Payment System
 Design an abstract class Payment:
 * method: pay(amount)
@@ -104,7 +103,7 @@ a.pay(2000)
 b.pay(700)
 c.pay(1000)
         
-    '''
+
 
 
 
