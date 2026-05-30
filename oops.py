@@ -80,29 +80,7 @@ Implement:
 * NetBankingPayment
 '''
 '''
-from abc import ABC, abstractmethod
-class Payment(ABC):
-    @abstractmethod
-    def pay(self,amount):
-        pass
-class CreditCardPayment(Payment):
-    def pay(self,amount):
-        print("Credit card payment",amount)
-class UPIPayment(Payment)
-    def pay(self,amount):
-        print("UPI payment",amount)
-class NetBankingPayment(Payment)
-    def pay(self,amount):
-        print("NetBanking payment",amount)
 
-a = CreditCardPayment()
-b = UPIPayment()
-c = NetBankingPayment()
-
-a.pay(2000)
-b.pay(700)
-c.pay(1000)
-        
 
 
 
