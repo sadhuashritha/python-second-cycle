@@ -102,7 +102,7 @@ c = NetBankingPayment()
 a.pay(2000)
 b.pay(700)
 c.pay(1000)
-        
+#
 
 
 
