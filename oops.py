@@ -95,14 +95,7 @@ class NetBankingPayment(Payment)
     def pay(self,amount):
         print("NetBanking payment",amount)
 
-a = CreditCardPayment()
-b = UPIPayment()
-c = NetBankingPayment()
 
-a.pay(2000)
-b.pay(700)
-c.pay(1000)
-#
 
 
 
