@@ -71,13 +71,13 @@ r.area()
 r.perimeter()
 
 
-Payment System
-Design an abstract class Payment:
-* method: pay(amount)
-Implement:
-* CreditCardPayment
-* UPIPayment
-* NetBankingPayment
+# Payment System
+# Design an abstract class Payment:
+# * method: pay(amount)
+# Implement:
+# * CreditCardPayment
+# * UPIPayment
+# * NetBankingPayment
 '''
 '''
 from abc import ABC, abstractmethod
@@ -88,10 +88,10 @@ class Payment(ABC):
 class CreditCardPayment(Payment):
     def pay(self,amount):
         print("Credit card payment",amount)
-class UPIPayment(Payment)
+class UPIPayment(Payment):
     def pay(self,amount):
         print("UPI payment",amount)
-class NetBankingPayment(Payment)
+class NetBankingPayment(Payment):
     def pay(self,amount):
         print("NetBanking payment",amount)
 
