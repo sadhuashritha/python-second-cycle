@@ -91,9 +91,7 @@ class CreditCardPayment(Payment):
 class UPIPayment(Payment):
     def pay(self,amount):
         print("UPI payment",amount)
-class NetBankingPayment(Payment):
-    def pay(self,amount):
-        print("NetBanking payment",amount)
+
 
 
 
