@@ -105,11 +105,4 @@ class Student:
 s = Student()
 s.details("Ashritha")
 print()
-# Create a method to check even or odd.
-class Check:
-    def res(self,a):
-        return a%2 == 0
-c = Check()
-print(c.res(3))
-print()
-# Create a menu-driven calculator using methods.
+
