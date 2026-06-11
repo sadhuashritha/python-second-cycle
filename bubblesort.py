@@ -36,3 +36,10 @@ print()
 print()
 print()
 
+s = [1,2,3,4,5,6.3,7,8]
+target = 6.3
+found = False
+for i in range(len(s)): #1
+    if s[i] == target:
+        found = True
+print(found)  
