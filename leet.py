@@ -187,15 +187,3 @@ class Solution:
             sum += nums[i]
         return sum
 
-#3838. Weighted Word Mapping
-class Solution:
-    def mapWordWeights(self, words: List[str], weights: List[int]) -> str:
-        letter = ""
-        for i in range(len(words)):
-            count = 0
-            for j in range(len(words[i])):
-                ind = ord(words[i][j])-ord('a')
-                count += weights[ind]
-            n = count % 26
-            letter += chr(ord('z') - n)
-        return letter
