@@ -199,20 +199,3 @@ class Solution:
             n = count % 26
             letter += chr(ord('z') - n)
         return letter
-# 1394. Find Lucky Integer in an Array
-class Solution:
-    def findLucky(self, arr: List[int]) -> int:
-        ele = []
-        dic= {}
-        for i in arr:
-            if i in dic:
-                dic[i] += 1
-            else:
-                dic[i] = 1
-        for i,j in dic.items():
-            if i == j:
-                ele.append(i)
-        if len(ele) != 0:
-            return max(ele)
-        else:
-            return -1
