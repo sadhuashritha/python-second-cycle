@@ -31,6 +31,6 @@ def merge_sort(arr):
             j+=1
             k+=1
 
-arr=[38,27,43,3,9,82,10,20]
+arr=[38,27,43,3,9,82,10]
 merge_sort(arr)
 print(arr)
