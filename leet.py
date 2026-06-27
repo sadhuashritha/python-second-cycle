@@ -267,11 +267,3 @@ class Solution:
                 right = mid - 1
         return [first,last]
     
-# Number of Strings That Appear as Substrings in Word
-class Solution:
-    def numOfStrings(self, patterns: List[str], word: str) -> int:
-        count = 0
-        for i in patterns:
-            if i in word:
-                count += 1
-        return count
