@@ -1,0 +1,307 @@
+# 2413. Smallest Even Multiple
+class Solution:
+    def smallestEvenMultiple(self, n: int) -> int:
+        if n % 2 == 0:
+            return n
+        else:
+            return n*2
+
+
+           
+# 1880. Check if Word Equals Summation of Two Words
+class Solution:
+    def isSumEqual(self, firstWord: str, secondWord: str, targetWord: str) -> bool:
+        val = ""
+        for i in firstWord:
+            val += str(ord(i) - ord('a'))
+
+        val1 = ""
+        for j in secondWord:
+            val1 += str(ord(j) - ord('a'))
+        
+        value = ""
+        for k in targetWord:
+            value += str(ord(k) - ord('a'))
+        
+        return int(val) + int(val1) == int(value)
+
+
+#initialise a parent class as Employee-constructor with parameter name, child class as Developer - constructor with parameter prog_lang, user super()
+
+class Employee:
+    def __init__(self,name):
+        self.name = name
+
+class Developer(Employee):
+    def __init__(self,name,fullname):
+        super().__init__(name)
+        self.fullname = fullname
+
+d = Developer("Ashritha","Sadhu")
+print(d.name)
+print(d.fullname)
+
+# Count Integers With Even Digit Sum
+class Solution:
+    def countEven(self, num: int) -> int:
+        count = 0
+        for i in range(1,num+1):
+            sumi = 0
+            for j in str(i):
+                sumi += int(j)
+            if sumi % 2 == 0:
+                count+=1
+        return count
+
+# Valid Perfect Square .
+
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        r = int(num ** 0.5)
+        return r * r == num
+
+# 1413. Minimum Value to Get Positive Step by Step Sum
+class Solution:
+    def minStartValue(self, nums: List[int]) -> int:
+        # prefix = [0] * len(nums)
+        # prefix[0] = nums[0]
+        # for i in range(1,len(nums)):
+        #     prefix[i] = prefix[i-1] + nums[i]
+        # mini = min(prefix)
+        prefix = 0
+        mini = 0
+        for i in nums:
+            prefix += i
+            mini = min(mini,prefix)
+        return max(1,1-(mini))
+ 
+
+#  1805. Number of Different Integers in a String
+class Solution:
+    def numDifferentIntegers(self, word: str) -> int:
+        s = ""
+        for i in word:
+            if i.isdigit():
+                s += i
+            else:
+                s += " "
+        arr = s.split()
+        unique = set()
+        for i in arr:
+            unique.add(int(i))
+        return len(unique)
+    
+# 2108. Find First Palindromic String in the Array
+class Solution:
+    def firstPalindrome(self, words: List[str]) -> str:
+        for i in words:
+            if i == i[::-1]:
+                return i
+        else:
+            return ""
+
+# 2778. Sum of Squares of Special Elements 
+class Solution:
+    def sumOfSquares(self, nums: List[int]) -> int:
+        n = len(nums)
+        sum = 0
+        for i in range(n):
+            if n % (i + 1) == 0:
+                sum += (nums[i] * nums[i])
+        return sum
+
+# 1475. Final Prices With a Special Discount in a Shop
+class Solution:
+    def finalPrices(self, prices: List[int]) -> List[int]:
+        for i in range(len(prices)):
+            for j in range(i+1,len(prices)):
+                if prices[j] <= prices[i]:
+                    prices[i] -= prices[j]
+                    break
+        return prices
+
+# 2670. Find the Distinct Difference Array
+class Solution:
+    def distinctDifferenceArray(self, nums: List[int]) -> List[int]:
+        arr = []
+        for i in range(len(nums)):
+            prefix = set(nums[:i+1])
+            suffix = set(nums[i+1:])
+            arr.append(len(prefix) - len(suffix))
+        return arr
+
+# 2124. Check if All A's Appears Before All B's
+class Solution:
+    def checkString(self, s: str) -> bool:
+        return "ba" not in s
+
+
+# 2644. Find the Maximum Divisibility Score
+class Solution:
+    def maxDivScore(self, nums: List[int], divisors: List[int]) -> int:
+        mini = 0 
+        answer = min(divisors)
+        for i in divisors:
+            count = 0
+            for j in nums:
+                if j % i  == 0:
+                    count += 1
+            if count > mini:
+                mini = count
+                answer = i
+            elif count == mini:
+                answer = min(i,answer)
+        return answer
+
+# Check if Array Is Sorted and Rotated
+class Solution:
+    def check(self, nums: List[int]) -> bool:
+        a = sorted(nums)
+        if a == nums:
+            return True
+        for i in range(len(nums)):
+            b = nums[i:]+nums[:i]
+            if b == a:
+                return True
+        return False
+
+    
+# Harshad Number
+class Solution:
+    def sumOfTheDigitsOfHarshadNumber(self, x: int) -> int:
+        z = str(x)
+        sum = 0
+        for i in z:
+            sum += int(i)
+        if x % sum == 0:
+            return sum
+        return -1
+
+
+# Array Partition
+class Solution:
+    def arrayPairSum(self, nums: List[int]) -> int:
+        nums.sort()
+        sum = 0
+        for i in range(0,len(nums),2):
+            sum += nums[i]
+        return sum
+
+#3838. Weighted Word Mapping
+class Solution:
+    def mapWordWeights(self, words: List[str], weights: List[int]) -> str:
+        letter = ""
+        for i in range(len(words)):
+            count = 0
+            for j in range(len(words[i])):
+                ind = ord(words[i][j])-ord('a')
+                count += weights[ind]
+            n = count % 26
+            letter += chr(ord('z') - n)
+        return letter
+# 1394. Find Lucky Integer in an Array
+class Solution:
+    def findLucky(self, arr: List[int]) -> int:
+        ele = []
+        dic= {}
+        for i in arr:
+            if i in dic:
+                dic[i] += 1
+            else:
+                dic[i] = 1
+        for i,j in dic.items():
+            if i == j:
+                ele.append(i)
+        if len(ele) != 0:
+            return max(ele)
+        else:
+            return -1
+
+# Student Attendance Record I
+class Solution:
+    def checkRecord(self, s: str) -> bool:
+        count = 0
+        for i in range(len(s)):
+            if s[i] == "A":
+                count += 1
+        if count < 2 and "LLL" not in s:
+            return True
+        return False
+
+#  Separate the Digits in an Array
+class Solution:
+    def separateDigits(self, nums: List[int]) -> List[int]:
+        li = []
+        for i in nums:
+            for j in str(i):
+                li.append(int(j))
+        return li
+
+# Find First and Last Position of Element in Sorted Array
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        first = -1
+        left = 0
+        right = len(nums) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            if nums[mid] == target:
+                first = mid
+                right = mid -1
+            elif nums[mid] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
+        
+        last = -1
+        left = 0
+        right = len(nums) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            if nums[mid] == target:
+                last = mid
+                left = mid + 1
+            elif nums[mid] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
+        return [first,last]
+    
+# Number of Strings That Appear as Substrings in Word
+class Solution:
+    def numOfStrings(self, patterns: List[str], word: str) -> int:
+        count = 0
+        for i in patterns:
+            if i in word:
+                count += 1
+        return count
+
+#  11 Container with most water
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        p1 = 0
+        p2 = len(height)-1
+        maxarea = 0
+        while p1 < p2:
+            mini = min(height[p1],height[p2])
+            area = mini * (p2-p1)
+            maxarea = max(area,maxarea)
+
+            if(height[p1] < height[p2]):
+                p1 += 1
+            else:
+                p2 -= 1
+        return maxarea
+
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        res = []
+        for i in range(len(nums)):
+            if nums[i] not in res:
+                res.append(nums[i])
+
+        for i in range(len(res)):
+            nums[i] = res[i]
+        return len(res)
+        
