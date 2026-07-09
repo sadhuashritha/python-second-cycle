@@ -29,7 +29,7 @@ def countingsort(arr):
     print("prefix sum arr: ",count)
     ans = [0] * len(arr)
     for i in range(len(arr)-1,-1,-1):
-        ans[count[arr[i]]-1] = arr[i]
+        ans[count[arr[i]]-1] = arr[i]  
         count[arr[i]] -= 1
     return ans
 arr = [4,3,2,2,6,2,8,4,3,0]
