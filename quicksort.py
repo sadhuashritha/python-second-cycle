@@ -24,7 +24,6 @@ print()
 print()
 
 
-def hoare(arr,low,high):
-    pivot = 
+
 
 
