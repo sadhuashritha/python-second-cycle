@@ -275,3 +275,20 @@ class Solution:
             if i in word:
                 count += 1
         return count
+
+#  11 Container with most water
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        p1 = 0
+        p2 = len(height)-1
+        maxarea = 0
+        while p1 < p2:
+            mini = min(height[p1],height[p2])
+            area = mini * (p2-p1)
+            maxarea = max(area,maxarea)
+
+            if(height[p1] < height[p2]):
+                p1 += 1
+            else:
+                p2 -= 1
+        return maxarea
