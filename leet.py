@@ -293,6 +293,7 @@ class Solution:
                 p2 -= 1
         return maxarea
 
+# 26. Remove Duplicates from Sorted Array
 
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
