@@ -22,8 +22,7 @@ print(sliding(arr,k))
 # print(sliding(arr1,k1))
 
 # 643. Maximum Average Subarray I
-class Solution:
-    def findMaxAverage(self, nums: List[int], k: int) -> float:
+def findMaxAverage(nums,k):
         total_sum = sum(nums[:k]) 
         # total_avg = total_sum / k
         max_avg =  total_sum
@@ -32,6 +31,9 @@ class Solution:
             # total_avg = total_sum / k
             max_avg = max(max_avg,total_sum)
         return max_avg / k
+arr = [[1,12,-5,-6,50,3]]
+k = 4
+print(findMaxAverage(arr,k))
               
 
 
