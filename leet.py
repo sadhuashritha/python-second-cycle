@@ -362,3 +362,19 @@ class Solution:
         for i,j in zip(seats,students):
             count += abs(i-j)
         return count
+
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        res = nums[0]
+        pre = 1
+        suf = 1
+        for i in range(len(nums)):
+            if pre == 0:
+                pre = 1
+            if suf == 0:
+                suf = 1
+            pre *= nums[i]
+            suf *= nums[len(nums)-1-i]
+            
+            res = max(res,pre,suf)
+        return res
