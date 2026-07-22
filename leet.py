@@ -363,6 +363,7 @@ class Solution:
             count += abs(i-j)
         return count
 
+# 152. Maximum Product Subarray
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         res = nums[0]
