@@ -363,7 +363,7 @@ class Solution:
             count += abs(i-j)
         return count
 
-# 152. Maximum Product Subarray
+# 152. Maximum Product Subarraysei
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         res = nums[0]
@@ -379,3 +379,10 @@ class Solution:
             
             res = max(res,pre,suf)
         return res
+    
+# 1464. Maximum Product of Two Elements in an Array
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        nums.sort(reverse= True)
+        ans = (nums[0]-1)*(nums[1]-1)
+        return ans
